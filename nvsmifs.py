@@ -5,6 +5,7 @@
 A (user-)friendly wrapper to nvidia-smi
 
 Author: Panagiotis Mavrogiorgos
+Modified: Jason King
 Adapted from: https://github.com/anderskm/gputil
 
 """
