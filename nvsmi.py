@@ -195,7 +195,7 @@ def get_available_gpus(
 
 def get_parser():
     main_parser = argparse.ArgumentParser(
-        prog="nvsmi", description="A (user-)friendy interface for nvidia-smi"
+        prog="nvsmifs", description="A (user-)friendy interface for nvidia-smi"
     )
     main_parser.add_argument(
         "--version",
@@ -286,7 +286,7 @@ def is_nvidia_smi_on_path():
     return shutil.which("nvidia-smi")
 
 
-def _nvsmi_ls(args):
+def _nvsmifs_ls(args):
     gpus = list(
         get_available_gpus(
             gpu_util_max=args.gpu_util_max,
@@ -302,7 +302,7 @@ def _nvsmi_ls(args):
         print(output)
 
 
-def _nvsmi_ps(args):
+def _nvsmifs_ps(args):
     processes = get_gpu_processes()
     if args.ids or args.uuids:
         for proc in processes:
@@ -339,9 +339,9 @@ def _main():
         args.uuids = set(args.uuids) if args.uuids else set()
         validate_ids_and_uuids(args)
         if args.mode == "ls":
-            _nvsmi_ls(args)
+            _nvsmifs_ls(args)
         elif args.mode == "ps":
-            _nvsmi_ps(args)
+            _nvsmifs_ps(args)
         else:
             parser.print_help()
 
