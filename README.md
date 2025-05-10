@@ -1,4 +1,4 @@
-# nvsmifsfs
+# nvsmifs
 
 A (user-)friendly wrapper to `nvidia-smi` forked from https://github.com/pmav99 to include fan speed support.
 
