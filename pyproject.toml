@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "nvsmi_fs"
+name = "nvsmifs"
 version = "0.4.3"
 description = "A (user-)friendly wrapper to nvidia-smi"
 authors = ["Panos Mavrogiorgos <pmav99@gmail.com>", "Jason King <jason@initiateit.com.au"]
