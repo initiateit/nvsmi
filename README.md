@@ -1,6 +1,6 @@
-# nvsmi
+# nvsmifsfs
 
-A (user-)friendly wrapper to `nvidia-smi`.
+A (user-)friendly wrapper to `nvidia-smi` forked from https://github.com/pmav99 to include fan speed support.
 
 It can be used to filter the GPUs based on resource usage (e.g. to choose the least utilized GPU on a multi-GPU system).
 
@@ -9,19 +9,19 @@ It can be used to filter the GPUs based on resource usage (e.g. to choose the le
 ### CLI
 
 ```
-nvsmi --help
-nvsmi ls --help
-nvsmi ps --help
+nvsmifs --help
+nvsmifs ls --help
+nvsmifs ps --help
 ```
 
 ### As a library
 
 ```
-import nvsmi
+import nvsmifs
 
-nvsmi.get_gpus()
-nvsmi.get_available_gpus()
-nvsmi.get_gpu_processes()
+nvsmifs.get_gpus()
+nvsmifs.get_available_gpus()
+nvsmifs.get_gpu_processes()
 ```
 
 ## Prerequisites
@@ -35,19 +35,19 @@ nvsmi.get_gpu_processes()
 ### pipx
 
 The recommended installation method is [pipx](https://github.com/pipxproject/pipx).
-More specifically, you can install `nvsmi` for your user with:
+More specifically, you can install `nvsmifs` for your user with:
 
 ``` shell
-pipx install nvsmi
+pipx install nvsmifs
 ```
 
-The above command will create a virtual environment in `~/.local/pipx/venvs/nvsmi` and
-add the `nvsmi` executable in `~/.local/bin`.
+The above command will create a virtual environment in `~/.local/pipx/venvs/nvsmifs` and
+add the `nvsmifs` executable in `~/.local/bin`.
 
 ### pip
 
 Alternatively you can use good old `pip` but this is more fragile than `pipx`:
 
 ```
-pip install --user nvsmi
+pip install --user nvsmifs
 ```
