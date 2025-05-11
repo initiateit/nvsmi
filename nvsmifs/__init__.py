@@ -20,7 +20,7 @@ import shutil
 import subprocess
 import sys
 
-__version__ = "0.4.3"
+__version__ = "1.0.0"
 
 NVIDIA_SMI_GET_GPUS = (
     "nvidia-smi --query-gpu=index,uuid,fan.speed,utilization.gpu,"
